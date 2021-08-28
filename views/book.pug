@@ -1,0 +1,106 @@
+doctype html
+html
+  head
+    meta(charset='uft-8')
+    title SB-HOME
+    link(rel='stylesheet' href='../../css/book.css')
+    style.
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+  body
+    #heading
+      h1 SEMBOOK
+      button#signoutb(onclick='location.href="/sembook"') GO BACK
+      #themes THEMES
+        button#theme1(class='theme') THEME1
+        br
+        button#theme2(class='theme') THEME2
+        br
+        button#theme3(class='theme') THEME3
+        br
+        button#theme4(class='theme') THEME4
+        br
+        button#theme5(class='theme') THEME5
+        br
+        button#theme6(class='theme') THEME6
+      #fonts FONTS 
+        button#font1(class='font') FONT1
+        br
+        button#font2(class='font') FONT2
+        br
+        button#font3(class='font') FONT3
+        br
+        button#font4(class='font') FONT4
+        br
+        button#font5(class='font') FONT5
+        br
+        button#font6(class='font') FONT6
+        br
+        button#font7(class='font') FONT7
+        br
+        button#font8(class='font') FONT8
+        br
+        button#font9(class='font') FONT9
+      #colours COLOURS
+        button#colour1(class='colour') COLOUR1
+        br
+        button#colour2(class='colour') COLOUR2
+        br
+        button#colour3(class='colour') COLOUR3
+        br
+        button#colour4(class='colour') COLOUR4
+        br
+        button#colour5(class='colour') COLOUR5
+        br
+        button#colour6(class='colour') COLOUR6
+        br
+        button#colour7(class='colour') COLOUR7
+        br
+        button#colour8(class='colour') COLOUR8
+        br
+        button#colour9(class='colour') COLOUR9
+      button#addpage ADD PAGE
+      button#save SAVE
+    #editorset
+        div(class='content' contenteditable="true")
+    script.
+        document.getElementById('addpage').addEventListener("click",()=>{
+            /*var divadd = document.createElement('div');
+            divadd.className = 'content';
+            divadd.contenteditable="true";
+            document.getElementById('editorset').appendChild(divadd);
+            */
+            document.getElementById('editorset').insertAdjacentHTML('beforeend','<br><div class="content" contenteditable="true"></div>');
+        })
+    script.
+        document.getElementById("save").addEventListener("click",()=>{
+        var pages = document.querySelectorAll('.content').length;
+        window.localStorage.setItem("count",pages);
+        var user = `#{data}`;
+        var finaldata = JSON.parse(user.replace(/(&quot\;)/g,'\"'));
+        var bookcount = parseInt("#{sem}");
+        window.localStorage.setItem("sem",bookcount);
+
+        for(let i=0;i<pages;i++)
+        {
+            var temp = document.querySelectorAll('.content')[i].textContent;
+            window.localStorage.setItem("data"+i,temp);
+        }
+        finaldata.book[bookcount-1].pageno = pages;
+        /*finaldata.markModified('book');
+        finaldata.save();
+        */
+        location.href = "/forms";
+        });
+    script.
+        var user = `#{data}`;
+        var finaldata = JSON.parse(user.replace(/(&quot\;)/g,'\"'));
+        var bookcount = parseInt("#{sem}");
+        var counting = finaldata.book[bookcount-1].pageno;
+        for(let i=0;i<counting-1;i++)
+        {
+            document.getElementById('editorset').insertAdjacentHTML('beforeend','<br><div class="content" contenteditable="true"></div>');
+        }
+        for(let l=0;l<counting;l++)
+        {
+            document.querySelectorAll('.content')[i].textContent = finaldata.book[bookcount-1].content[i];
+        }

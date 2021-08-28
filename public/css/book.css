@@ -1,0 +1,202 @@
+body{
+    background-color: rgb(104, 17, 17);
+    margin: 0;
+    margin-top: -21px;
+    font-family: 'Dancing Script', cursive;
+}
+#heading{
+    width: 99%;
+    min-height: 80px;
+    vertical-align: middle;
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 1%;
+    box-shadow: 0 0 15px 5px black;
+}
+#signoutb{
+    float: right;
+    width: auto;
+    height: auto;
+    font-size: large;
+    background-color: white;
+    border: 0px;
+    min-height: 60px;
+    margin-right: 20px;
+    margin-top: -70px;
+    transition: 0.4s;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+}
+#signoutb:hover{
+    background-color: rgb(104, 17, 17);
+    transition: 0.4s;
+}
+#themes{
+    float: right;
+    width: auto;
+    height: auto;
+    font-size: large;
+    background-color: white;
+    border: 0px;
+    min-height: 40px;
+    max-height: 40px;
+    margin-right: 120px;
+    margin-top: -71px;
+    transition: 0.4s;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+    padding-top: 20px;
+}
+#fonts{
+    float: right;
+    width: auto;
+    height: auto;
+    font-size: large;
+    background-color: white;
+    border: 0px;
+    min-height: 40px;
+    margin-right: 210px;
+    margin-top: -71px;
+    transition: 0.4s;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+    padding-top: 20px;
+}
+#colours{
+    float: right;
+    width: auto;
+    height: auto;
+    font-size: large;
+    background-color: white;
+    border: 0px;
+    min-height: 40px;
+    margin-right: 280px;
+    margin-top: -71px;
+    transition: 0.4s;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+    padding-top: 20px;
+}
+#addpage{
+    float: right;
+    width: auto;
+    height: auto;
+    font-size: large;
+    background-color: white;
+    border: 0px;
+    min-height: 60px;
+    margin-right: 380px;
+    margin-top: -70px;
+    transition: 0.4s;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+}
+#save{
+    float: right;
+    width: auto;
+    height: auto;
+    font-size: large;
+    background-color: white;
+    border: 0px;
+    min-height: 60px;
+    margin-right: 480px;
+    margin-top: -70px;
+    transition: 0.4s;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+}
+.theme{
+    display: none;
+    position: absolute;
+    background-color: rgb(104, 17, 17);
+    min-width: 100px;
+    height: auto;
+    z-index: 1;
+    font-family: 'Dancing Script', cursive;
+}
+.font{
+    display: none;
+    position: absolute;
+    background-color: rgb(104, 17, 17);
+    min-width: 100px;
+    height: auto;
+    z-index: 1;
+    font-family: 'Dancing Script', cursive;
+}
+.colour{
+    display: none;
+    position: absolute;
+    background-color: rgb(104, 17, 17);
+    min-width: 100px;
+    height: auto;
+    z-index: 1;
+    font-family: 'Dancing Script', cursive;
+}
+#themes:hover{
+    max-height: auto;
+}
+#themes:hover .theme{
+    display: block;
+}
+.theme:hover{
+    background-color: rgb(104, 17, 17);
+    display: block;
+    cursor: pointer;
+}
+#fonts:hover{
+    max-height: auto;
+}
+#fonts:hover .font{
+    display: block;
+}
+.font:hover{
+    background-color: rgb(104, 17, 17);
+    display: block;
+    cursor: pointer;
+}
+#colours:hover{
+    max-height: auto;
+}
+#colours:hover .colour{
+    display: block;
+}
+.colour:hover{
+    background-color: rgb(104, 17, 17);
+    display: block;
+    cursor: pointer;
+}
+#editorset{
+    position: relative;
+    width: 90%;
+    height: auto;
+    min-height: 600px;
+    background-color: white;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.content{
+    position: relative;
+    margin-top: 5%;
+    width: 90%;
+    height: 500px;
+    background-color: rgb(104, 17, 17);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    border: 3px solid black;
+    box-shadow: 0 0 15px 5px black;
+}
+.content:not(:first-child){
+    position: relative;
+    margin-top: 10px;
+}

@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='uft-8')
+    title SB-SIGN IN
+    link(rel='stylesheet' href='css/signin.css')
+    style.
+       @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+  body
+    #heading
+      h1 SEMBOOK
+      button#homeb(onclick='location.href="/"') HOME
+    #content
+      h2 LOGIN
+      form#login(method='POST' action='/signin')
+        label(for='email') Enter Email Id:
+        br
+        input#email(type='text' name='email')
+        br
+        br
+        label(for='password') Enter Password:
+        br
+        input#password(type='password' name='password')
+        br
+        br
+        button#submit(type='submit') LOGIN
+        br

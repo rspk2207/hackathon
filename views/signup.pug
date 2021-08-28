@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    meta(charset='uft-8')
+    title SB-SIGN UP
+    link(rel='stylesheet' href='css/signup.css')
+    style.
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+  body
+    #heading
+      h1 SEMBOOK
+      button#homeb(onclick='location.href="/"') HOME
+    #content
+      h2 
+      form#register(method='POST' action='/signup')
+        label(for='name') Enter Name:
+        br
+        input#name(type='text' name='name')
+        br
+        br
+        label(for="email") Enter Email Id (Use NITT Email):
+        br
+        input#email(type="text" name="email")
+        br
+        br
+        label(for='password') Enter Password:
+        br
+        input#password(type='password' name='password')
+        br
+        br
+        label(for='sem') Enter Semester Number:
+        br
+        input#password(type='number' name='sem')
+        br
+        br
+        button#submit(type='submit') SIGN UP
+        br
+        br
