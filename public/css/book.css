@@ -57,6 +57,7 @@ body{
     background-color: white;
     border: 0px;
     min-height: 40px;
+    max-height: 40px;
     margin-right: 210px;
     margin-top: -71px;
     transition: 0.4s;
@@ -73,6 +74,7 @@ body{
     background-color: white;
     border: 0px;
     min-height: 40px;
+    max-height: 40px;
     margin-right: 280px;
     margin-top: -71px;
     transition: 0.4s;
